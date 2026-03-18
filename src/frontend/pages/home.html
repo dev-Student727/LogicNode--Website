@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css"> <!-- Main style -->
+    <link rel="stylesheet" href="../styles/background.css"> <!-- Background style -->
+    <link rel="stylesheet" href="../styles/sidebar.css"> <!-- Navigation Style -->
+    <link rel="stylesheet" href="../styles/animation.css"> <!-- Animation -->
+    <link rel="stylesheet" href="../styles/mobile.css"> <!-- Mobile Responsiveness -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Node-Logic</title>
+</head>
+<body>
+    <!--Background -->
+    <div class="bg-circuit"></div>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- ********** Mobile Reponsiveness ********** -->
+    <header class="mobile-header">
+        <button class="menu-toggle" id="openBtn"><i class="fa-solid fa-bars-staggered"></i></button>
+        <span class="mobile-page-title" id="mobileTitle">Home</span>
+        <div style="width: 40px;"></div>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+        <button class="close-sidebar" id="closeBtn"><i class="fa-solid fa-xmark"></i></button>
+        
+        <!-- Sidebar Logo -->
+        <a href="#" class="logo-wrapper">
+                <div class="logo-icon"><i class="fa-solid fa-bolt"></i></div>
+                <span class="logo-text">CORE.IO</span>
+        </a>
+
+        <!-- Sidebar Links-->
+        <ul class="nav-menu">
+            <!-- Dashboard -->
+            <li class="nav-item">
+                <a href="../../frontend/index.html" class="nav-link" data-title="Dashboard">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <!-- Home-->
+            <li class="nav-item">
+                <a href="../../frontend/pages/home.html" class="nav-link active" data-title="Home">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+
+            <!-- Courses -->
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-title="Courses">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>Courses</span>
+                </a>
+            </li>
+
+            <!-- Quiz-->
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-title="Quiz">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <span>Quiz</span>
+                </a>
+            </li>
+
+            <!-- Grades-->
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-title="Grades">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Grades</span>
+                </a>
+            </li>
+
+            <!-- Feedback-->
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-title="Feedback">
+                    <i class="fa-solid fa-message"></i>
+                    <span>Feedback</span>
+                </a>
+            </li>
+
+            <!-- Profile-->
+            <li class="nav-item">
+                <a href="#" class="nav-link " data-title="Profile">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+
+            <!-- Support-->
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-title="Support">
+                    <i class="fa-solid fa-headset"></i>
+                    <span>Support</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
