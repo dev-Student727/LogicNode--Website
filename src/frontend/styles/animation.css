@@ -1,3 +1,13 @@
+/* ----------- Roots ---------- */
+:root {
+    --primary-blue: #3b82f6;
+    --linear-gradient-color: linear-gradient(to right, #ffffff, #60a5fa);
+    --dark-bg: #050a15;
+    --sidebar-bg: rgba(10, 20, 40, 0.98);
+    --card-bg: rgba(15, 23, 42, 0.7);
+    --text-gray: #9ca3af;
+    --error-red: #ef4444;
+}
 /* ========== Animation styling ========== */
 .close-sidebar:hover {
     color: #3b82f6;
@@ -10,4 +20,18 @@
 .nav-link:hover {
     color: #ffffff;
     background: rgba(255, 255, 255, 0.05);
+}
+
+/* ========== HOMEAPAGE STYLING ==========*/
+/* Hub Grids Cards */
+.grid-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-blue);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Action link button style */
+.action-link:hover {
+    background: var(--primary-blue);
+    border-color: var(--primary-blue);
 }

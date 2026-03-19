@@ -25,7 +25,6 @@
     </header>
 
     <nav class="sidebar" id="sidebar">
-        <button class="close-sidebar" id="closeBtn"><i class="fa-solid fa-xmark"></i></button>
         
         <!-- Sidebar Logo -->
         <a href="#" class="logo-wrapper">
@@ -100,5 +99,148 @@
             </li>
         </ul>
     </nav>
+
+    <!-- Home page contents -->
+    <main class="main-container">
+        <section class="hero-content">
+            <h5>Web-Based Learning System</h5>
+            <h1>Welcome to <span>CORE.IO</span></h1>
+            <p>Welcome to CORE.io, your ultimate interactive destination for mastering the world of technology and computer hardware. Dive into our historical archives to trace the evolution of computing or sharpen your technical expertise through our specialized courses and quizzes. Whether you are a student or a tech enthusiast, we provide the tools to help you understand every component from the inside out. Explore the core of innovation and start your learning journey today with core.io.</p>
+        </section>
+
+        <div class="hub-grid" id="hub-grid">
+            <!-- Hub Card: Courses-->
+            <div class="grid-card">
+                <div>
+                    <i class="fa-solid fa-book-open"></i>
+                    <h3>Courses</h3>
+                    <p>Explore the comprehensive history of Technology and Computers, and learn more about the computer part from basic to complex</p>
+                </div>
+                <a href="#" class="action-link" data-title="Dashboard">View More</a>
+            </div>
+
+            <!-- Hub Card: Quizzes-->
+            <div class="grid-card">
+                <div>
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <h3>Quiz</h3>
+                    <p>Test your knowledge about technology and computer by answer the quiz</p>
+                </div>
+                <a href="#" class="action-link" data-title="Dashboard">Start Quiz</a>
+            </div>
+
+            <!-- Hub Card: Grades-->
+            <div id="grades-hub-placeholder"></div>
+
+            <!-- Hub Card: Dashboard-->
+            <div class="grid-card">
+                <div>
+                    <i class="fa-solid fa-gauge"></i>
+                    <h3>Dashboard</h3>
+                    <p>Monitor learning trajectory, announcement, and system updates and maintenance</p>
+                </div>
+                <a href="../../frontend/index.html" class="action-link" data-title="Dashboard">See Dashboard</a>
+            </div>
+
+            <!-- Hub Card: Profile--> 
+            <div class="grid-card">
+                <div>
+                    <i class="fa-solid fa-user"></i>
+                    <h3>Profile</h3>
+                    <p>Track your record, edit and changing your profile.</p>
+                </div>
+                <a href="#" class="action-link" data-title="Dashboard">See Profile</a>
+            </div>
+
+            <!-- Hub Card: Support-->
+            <div class="grid-card">
+                <div>
+                    <i class="fa-solid fa-headset"></i>
+                    <h3>24/7 Assistance Support</h3>
+                    <p>Get technical assistance or ask for help documentation.</p>
+                </div>
+                <a href="#" class="action-link" data-title="Dashboard">Support</a>
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        // Mock state: change to false to see the locked/warning state
+        const quizzesDone = false;
+
+        function initHomeHub() {
+            const placeholder = document.getElementById('grades-hub-placeholder');
+
+            if (quizzesDone) {
+                placeholder.innerHTML = `
+                    <div class="grid-card">
+                        <div>
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <h3>Grades</h3>
+                            <p>See your score and review each answer</p>
+                        </div>
+                        <a href="#" class="action-link" data-title="Grades">View Grades</a>
+                    </div>
+                `;
+            } else  {
+                // Locked/Warning State
+                placeholder.innerHTML = `
+                    <div class="grid-card card-warning" style="opacity: 0.8; cursor: not-allowed;">
+                        <div>
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            <h3>Grades</h3>
+                            <p>Grades access is currently restricted.</p>
+                        </div>
+                        <div class="text-error">
+                            <i class="fa-solid fa-circle-xmark" style="font-size: 0.9rem; margin-bottom: 0;"></i>
+                            No quiz completed yet.
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        // Sidebar interactions
+        const sidebar = document.getElementById('sidebar');
+        const openBtn = document.getElementById('openBtn');
+        const overlay = document.getElementById('overlay');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const mobileTitle = document.getElementById('mobileTitle');
+        
+        // Toggle Sidebar Function
+        function toggleSidebar() {
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+        
+        // Listeners for Sidebar controls
+        if (openBtn) openBtn.addEventListener('click', toggleSidebar);
+        if (overlay) overlay.addEventListener('click', toggleSidebar);
+        
+        // Navigation Link logic
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+
+                // If link is just a placeholder, prevent default
+                if (href === '#') {
+                    e.preventDefault();
+                }
+        
+                // Update the Mobile Header Title
+                const title = link.getAttribute('data-title');
+                if (mobileTitle && title) {
+                    mobileTitle.textContent = title;
+                }
+        
+                // Auto-close sidebar on mobile after selection
+                if (window.innerWidth <= 992 && sidebar.classList.contains('active')) {
+                    toggleSidebar();
+                }
+            });
+        });
+
+        window.onload = initHomeHub;
+    </script>
 </body>
 </html>
