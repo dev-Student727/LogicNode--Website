@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="../styles/sidebar.css"> <!-- Navigation Style -->
     <link rel="stylesheet" href="../styles/animation.css"> <!-- Animation -->
     <link rel="stylesheet" href="../styles/mobile.css"> <!-- Mobile Responsiveness -->
+    <link rel="stylesheet" href="../styles/footer.css"> <!-- Footer Style -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>Node-Logic</title>
+    <title>CORE.IO</title>
 </head>
 <body>
     <!--Background -->
@@ -105,8 +106,131 @@
         <section class="hero-content">
             <h5>Web-Based Learning System</h5>
             <h1>Welcome to <span>CORE.IO</span></h1>
-            <p>Welcome to CORE.io, your ultimate interactive destination for mastering the world of technology and computer hardware. Dive into our historical archives to trace the evolution of computing or sharpen your technical expertise through our specialized courses and quizzes. Whether you are a student or a tech enthusiast, we provide the tools to help you understand every component from the inside out. Explore the core of innovation and start your learning journey today with core.io.</p>
+            <p>This is an ultimate interactive destination for mastering the world of technology and computer hardware. Dive into our historical archives to trace the evolution of computing or sharpen your technical expertise through our specialized courses and quizzes. Whether you are a student or a tech enthusiast, we provide the tools to help you understand every component from the inside out. Explore the core of innovation and start your learning journey today with core.io.</p>
         </section>
+
+        <!-- ******* Tech Spotlight Carousel ******* -->
+        <div class="tech-carousel-container">
+            <button class="carousel-btn prev-btn" id="prevBtn">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn next-btn" id="nextBtn">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <div class="carousel-view">
+                <div class="carousel-track" id="carouselTrack">
+
+                    <!-- **Slide 1** -->
+                    <div class="spotlight-slide">
+                        <div class="spotlight-image-container">
+                            <div class="spotlight-image" style="background-image: url('../../assets/overlay-img/keyboard-mouse.jpg');"></div>
+                        </div>
+                        <div class="spotlight-info">
+                            <div class="spotlight-text-content">
+                                <h2>Keyboard & Mouse</h2>
+                                <p>The history of the computer keyboard begins with the Sholes and Glidden typewriter in 1874, which introduced the QWERTY layout designed to prevent mechanical arms from jamming.</p>
+                            </div>
+                            <a href="#" class="action-link">Read History</a>
+                        </div>
+                    </div>
+
+                    <!-- **Slide 2** -->
+                    <div class="spotlight-slide">
+                        <div class="spotlight-image-container">
+                            <div class="spotlight-image" style="background-image: url('');"></div>
+                        </div>
+                        <div class="spotlight-info">
+                            <div class="spotlight-text-content">
+                                <h2>2 Content Waiting to be Added.....</h2>
+                                <p>...</p>
+                            </div>
+                            <a href="#" class="action-link">Read History</a>
+                        </div>
+                    </div>
+
+                    <!-- **Slide 3** -->
+                    <div class="spotlight-slide">
+                        <div class="spotlight-image-container">
+                            <div class="spotlight-image" style="background-image: url('');"></div>
+                        </div>
+                        <div class="spotlight-info">
+                            <div class="spotlight-text-content">
+                                <h2>3 Content Waiting to be Added.....</h2>
+                                <p>...</p>
+                            </div>
+                            <a href="#" class="action-link">Read History</a>
+                        </div>
+                    </div>
+
+                    <!-- **Slide 4** -->
+                    <div class="spotlight-slide">
+                        <div class="spotlight-image-container">
+                            <div class="spotlight-image" style="background-image: url('');"></div>
+                        </div>
+                        <div class="spotlight-info">
+                            <div class="spotlight-text-content">
+                                <h2>4 Content Waiting to be Added.....</h2>
+                                <p>...</p>
+                            </div>
+                            <a href="#" class="action-link">Read History</a>
+                        </div>
+                    </div>
+
+                    <!-- **Slide 5** -->
+                    <div class="spotlight-slide">
+                        <div class="spotlight-image-container">
+                            <div class="spotlight-image" style="background-image: url('');"></div>
+                        </div>
+                        <div class="spotlight-info">
+                            <div class="spotlight-text-content">
+                                <h2>5 Content Waiting to be Added.....</h2>
+                                <p>...</p>
+                            </div>
+                            <a href="#" class="action-link">Read History</a>
+                        </div>
+                    </div>
+
+                    <!-- **Slide 6** -->
+                    <div class="spotlight-slide">
+                        <div class="spotlight-image-container">
+                            <div class="spotlight-image" style="background-image: url('');"></div>
+                        </div>
+                        <div class="spotlight-info">
+                            <div class="spotlight-text-content">
+                                <h2>6 Content Waiting to be Added.....</h2>
+                                <p>...</p>
+                            </div>
+                            <a href="#" class="action-link">Read History</a>
+                        </div>
+                    </div>
+
+                    <!-- **Slide 7** -->
+                    <div class="spotlight-slide">
+                        <div class="spotlight-image-container">
+                            <div class="spotlight-image" style="background-image: url('');"></div>
+                        </div>
+                        <div class="spotlight-info">
+                            <div class="spotlight-text-content">
+                                <h2>7 Content Waiting to be Added.....</h2>
+                                <p>...</p>
+                            </div>
+                            <a href="#" class="action-link">Read History</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-indicators" id="indicators">
+                <div class="indicator active"><div class="indicator-progress"></div></div>
+                <div class="indicator"><div class="indicator-progress"></div></div>
+                <div class="indicator"><div class="indicator-progress"></div></div>
+                <div class="indicator"><div class="indicator-progress"></div></div>
+                <div class="indicator"><div class="indicator-progress"></div></div>
+                <div class="indicator"><div class="indicator-progress"></div></div>
+            </div>
+
+        </div>
 
         <div class="hub-grid" id="hub-grid">
             <!-- Hub Card: Courses-->
@@ -116,7 +240,7 @@
                     <h3>Courses</h3>
                     <p>Explore the comprehensive history of Technology and Computers, and learn more about the computer part from basic to complex</p>
                 </div>
-                <a href="#" class="action-link" data-title="Dashboard">View More</a>
+                <a href="#" class="action-link" data-title="Courses">View More</a>
             </div>
 
             <!-- Hub Card: Quizzes-->
@@ -126,11 +250,41 @@
                     <h3>Quiz</h3>
                     <p>Test your knowledge about technology and computer by answer the quiz</p>
                 </div>
-                <a href="#" class="action-link" data-title="Dashboard">Start Quiz</a>
+                <a href="#" class="action-link" data-title="Quiz">Start Quiz</a>
             </div>
 
             <!-- Hub Card: Grades-->
             <div id="grades-hub-placeholder"></div>
+
+            <!-- Hub Card: Lab-->
+            <div class="grid-card">
+                <div>
+                    <i class="fa-solid fa-microchip"></i>
+                    <h3>Logic Gates Lab</h3>
+                    <p>Build and test AND, OR, and NOT gate configurations in a virtual sandbox environment.</p>
+                </div>
+                <a href="#" class="action-link disabled" style="cursor: not-allowed; pointer-events: auto; background: rgba(59, 130, 246, 0.05); border-color: rgba(59, 130, 246, 0.2); color: var(--text-gray);" data-title="Logic-Gates-Lab">Coming Soon</a>
+            </div>
+
+            <!-- Hub Card: Component-->
+            <div class="grid-card">
+                <div>
+                    <i class="fa-solid fa-link"></i>
+                    <h3>Components Synergy</h3>
+                    <p>Analyze how bus speeds, RAM latency, and PCIe lanes affect overall system throughput.</p>
+                </div>
+                <a href="#" class="action-link disabled" style="cursor: not-allowed; pointer-events: auto; background: rgba(59, 130, 246, 0.05); border-color: rgba(59, 130, 246, 0.2); color: var(--text-gray);" data-title="Components Synergy">Coming Soon</a>
+            </div>
+
+            <!-- Hub Card: Technology-->
+            <div class="grid-card">
+                <div>
+                    <i class="fa-solid fa-folder"></i>
+                    <h3>Technology Archives</h3>
+                    <p>...</p>
+                </div>
+                <a href="#" class="action-link disabled" style="cursor: not-allowed; pointer-events: auto; background: rgba(59, 130, 246, 0.05); border-color: rgba(59, 130, 246, 0.2); color: var(--text-gray);" data-title="Technology-Archives">Coming Soon</a>
+            </div>
 
             <!-- Hub Card: Dashboard-->
             <div class="grid-card">
@@ -163,7 +317,82 @@
             </div>
         </div>
     </main>
-    
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a href="#" class="logo-wrapper">
+                    <div class="logo-icon"><i class="fa-solid fa-bolt"></i></div>
+                </a>
+                <p>Decoding the future of computing, technology, and history of computer hardware. A comprehensive learning platform for hardware enthusiasts, engineers, and digital historians.</p>
+                <div class="social-links">
+                    <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-btn"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Learning</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Quiz</a></li>
+                    <li><a href="#">Grades</a></li>
+                    <li><a href="#">Logic Lab</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Tech Archives</a></li>
+                    <li><a href="#">Hardware Specs</a></li>
+                    <li><a href="#">Support Center</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Account</h4>
+                <ul class="footer-links">
+                    <li><a href="#">My Profile</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Certifications</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-contact-bar">
+            <a href="mailto:support@core.io" class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <span>support@core.io</span>
+            </a>
+            <a href="tel:09123456789" class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>09123456789</span>
+            </a>
+            <a href="mailto:support@core.io" class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <span>support@core.io</span>
+            </a>
+            <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Quezon City, Philippines</span>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 CORE.IO. ALL rights reserved.</p>
+            <div class="bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
     <script>
         // Mock state: change to false to see the locked/warning state
         const quizzesDone = false;
@@ -241,6 +470,73 @@
         });
 
         window.onload = initHomeHub;
+
+        const track = document.getElementById('carouselTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const indicators = document.querySelectorAll('.indicator');
+        const progressBars = document.querySelectorAll('.indicator-progress');
+
+        if (track) {
+            let currentIndex = 0;
+            const totalSlides = 6; // Update this if you add/remove slides
+            const slideDuration = 5000;
+            let startTime = Date.now();
+            let animationFrameId;
+        
+            function animationProgress() {
+                const elapsed = Date.now() - startTime;
+                const progress = Math.min((elapsed / slideDuration) * 100, 100);
+                
+                if (progressBars[currentIndex]) {
+                    progressBars[currentIndex].style.width = `${progress}%`;
+                }
+        
+                if (progress >= 100) {
+                    nextSlide();
+                } else {
+                    animationFrameId = requestAnimationFrame(animationProgress);
+                }
+            }
+        
+            function updateCarousel() {
+                track.style.transform = `translateX(-${currentIndex * (100 / totalSlides)}%)`;
+        
+                indicators.forEach((ind, i) => {
+                    ind.classList.toggle('active', i === currentIndex);
+                    if (progressBars[i]) {
+                        progressBars[i].style.width = i < currentIndex ? '100%' : '0';
+                    }
+                });
+                startTime = Date.now();
+                cancelAnimationFrame(animationFrameId);
+                animationProgress();
+            }
+        
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateCarousel();
+            }
+        
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+            }
+        
+            if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+            if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+        
+            indicators.forEach((ind, i) => {
+                ind.addEventListener('click', () => {
+                    currentIndex = i;
+                    updateCarousel();
+                });
+            });
+        
+            // Start initial animation
+            animationProgress();
+        }
     </script>
+
 </body>
 </html>

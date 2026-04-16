@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Archivo+Black&family=BBH+Hegarty&family=Bungee&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Mono+One&display=swap');
+/* ----------- Roots ---------- */
+:root {
+    --primary-blue: #3b82f6;
+    --linear-gradient-color: linear-gradient(to right, #ffffff, #60a5fa);
+    --dark-bg: #050a15;
+    --sidebar-bg: rgba(10, 20, 40, 0.98);
+    --footer-bg: #0a1120;
+    --card-bg: rgba(15, 23, 42, 0.7);
+    --text-gray: #9ca3af;
+    --error-red: #ef4444;
+    --accent-glow: rgba(59, 130, 246, 0.3);
+}
+
+/* ========== Site Footer Styles ========== */
+.site-footer {
+    background: var(--footer-bg);
+    padding: 80px 40px 40px 40px;
+    border-top: 1px solid rgba(59, 130, 246, 0.2);
+    width: 100%;
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    transition: 0.3s;
+}
+
+.footer-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}

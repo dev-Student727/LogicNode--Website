@@ -5,9 +5,11 @@
     --linear-gradient-color: linear-gradient(to right, #ffffff, #60a5fa);
     --dark-bg: #050a15;
     --sidebar-bg: rgba(10, 20, 40, 0.98);
+    --footer-bg: #0a1120;
     --card-bg: rgba(15, 23, 42, 0.7);
     --text-gray: #9ca3af;
     --error-red: #ef4444;
+    --accent-glow: rgba(59, 130, 246, 0.3);
 }
 /* ----------- Body Style ---------- */
 *{
@@ -181,40 +183,150 @@ body{
 .hero-content {
     margin-bottom: 50px;
     text-align: center;
-    max-width: 1100px;
+    max-width: 1500px;
     margin-top: 20px;
 }
 
 .hero-content h5 {
     color: var(--primary-blue);
     text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.8rem;
-    margin-bottom: 10px;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    font-weight: 600;
 }
 
 .hero-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
+    font-size: 3.5rem;
+    font-family: 'Archivo Black', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 800;
+    line-height: 1.1;
 }
 
 .hero-content span {
     color: var(--primary-blue);
+    text-shadow: 0 0 15px (var(--accent-glow));
 }
 
 .hero-content p {
     color: var(--text-gray);
     margin: 0 auto;
-    line-height: 1.6;
-    font-size: 1.1rem;
+    line-height: 1.8;
+    font-size: 1.15rem;
 }
 
-/* Hub Grids Cards */
+/* Tech Spotlight Carousel Section */
+.tech-carousel-container {
+    width: 100%;
+    max-width: 1200;
+    position: relative;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    border: 3px solid rgba(59, 130, 246, 0.4);
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(5, 10, 21, 0.9));
+}
+
+.carousel-view {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+    width: 600%;
+}
+
+.spotlight-slide {
+    width: calc(100% / 6);
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.spotlight-image-container {
+    flex: 0 0 380px;
+    height: 280px;
+    margin-left: 30px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}
+
+.spotlight-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.spotlight-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 260px;
+    margin-left: 40px;
+    margin-right: 30px;
+}
+
+.spotlight-text-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.spotlight-text-content p {
+    color: var(--text-gray);
+    line-height: 1.6; 
+    font-size: 0.92rem;
+    max-width: 100%;
+    margin-top: 15px;
+}
+
+.spotlight-info .action-link {
+    width: fit-content;
+    padding: 8px 24px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* tech-carousel-container - carousel button styling */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #050a15;
+    border: 3px solid var(--primary-blue);
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 30;
+    transition: all 0.3s ease;
+}
+
+.prev-btn {left: -24px;}
+.next-btn {right: -24px;}
+
 .hub-grid {
     display: grid;
     gap: 25px;
     width: 100%; /* Ensure grid takes full container width */
-    max-width: 1500px;
+    max-width: 1600px;
     padding: 20px 0;
 }
 
@@ -267,6 +379,36 @@ body{
     font-weight: 600;
     transition: 0.3s;
     display: block;
+    cursor: pointer;
+}
+
+/* Indicators */
+.carousel-indicators {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.indicator {
+    width: 18px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.indicator-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0%;
+    background: var(--primary-blue);
 }
 
 /* Warning/Erron State for card */
@@ -281,12 +423,44 @@ body{
     margin-top: auto;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1100px) {
     .main-container {
         margin-left: 0;
         width: 100%;
-        padding-top: 90px;
+        padding: 100px 20px 40px 20px;
     }
+
+    .spotlight-slide {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center; 
+    }
+    .spotlight-image-container {
+        flex: 0 0 220px;
+        width: 100%;
+        height: 220px;
+        margin-left: 0;
+        margin-bottom: 25px;
+    }
+    .spotlight-info {
+        height: auto;
+        gap: 20px;
+        margin: 0;
+        padding: 0 10px;
+        align-items: center;
+        justify-content: center;
+    }
+    .spotlight-text-content p {
+        text-align: center;
+        margin-top: 15px;
+    }
+    .spotlight-info .action-link {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .prev-btn {left: -24px;}
+    .next-btn {right: -24px;}
 
     .hero-content h1 {
         font-size: 2.2rem;
